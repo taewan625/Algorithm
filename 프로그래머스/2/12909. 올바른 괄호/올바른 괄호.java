@@ -11,6 +11,13 @@ class Solution {
         //유효성 검사 통과 시
         else {
             int cnt = 0;
+
+             /* 다른 방식
+            for(int i = 0; i < s.length(); i++){
+                if(s.charAt(i) == ')' ){}
+            }
+             */
+            
             //문자열1개씩 분리
             for (String part : s.split("") ) {
                 //-부호가 나오면 바로 false
