@@ -7,19 +7,8 @@ class Solution {
 
         //한쪽을 최대한 길게
         for (int[] size : sizes) {
-            int width = size[0];
-            int length = size[1];
-
-            int shortPart;
-            int longPart;
-
-            if (width < length) {
-                shortPart = width;
-                longPart = length;
-            } else {
-                shortPart = length;
-                longPart = width;
-            }
+            int shortPart = Math.min(size[0], size[1]);
+            int longPart = Math.max(size[0], size[1]);
 
             if (shortPartLongest < shortPart) shortPartLongest = shortPart;
             if (longPartLongest < longPart) longPartLongest = longPart;
